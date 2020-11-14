@@ -1,0 +1,135 @@
+/* ==========================================================================
+  Sign in style
+========================================================================== */
+.signin-bg {
+  background: $eos-signin-layout-content-background;
+}
+
+.signin-content {
+  align-content: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+}
+
+.sign-in-box {
+  display: flex;
+  margin: auto;
+  overflow: auto;
+  width: $sign-in-box-width;
+}
+
+.brand-container {
+  background-color: $sign-in-brand-container-bg-color;
+  color: $sign-in-brand-container-color;
+  margin: $sign-in-brand-container-margin 0;
+  padding: $sign-in-brand-container-padding;
+  width: $sign-in-brand-container-width;
+
+  .sign-in-img {
+    margin: $sign-in-line-img-margin-top $sign-in-line-img-margin;
+  }
+
+  h1 {
+    color: $sign-in-h1-color;
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+.form-container {
+  background-color: $sign-in-form-container-bg-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: $sign-in-brand-container-margin 0;
+  width: $sign-in-form-container-width;
+
+  .sign-in-header {
+    padding: $sign-in-form-container-header-padding;
+  }
+
+  .logo-right {
+    display: none;
+  }
+
+  h1 {
+    color: $sign-in-h1-color;
+  }
+
+  .sign-in-form {
+    height: 100%;
+    margin: 0 auto;
+    width: $sign-in-form-container-form-width;
+  }
+
+  .form-links {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .sign-in-footer {
+    width: 100%;
+
+    ul {
+      margin: $sign-in-form-container-footer-ul-margin;
+      padding: 0;
+
+      li {
+        display: inline-flex;
+        list-style: none;
+        margin-right: $sign-in-form-container-footer-li-margin-right;
+        padding: $sign-in-form-container-footer-li-padding;
+      }
+    }
+
+    .sign-in-cookies {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (max-width: 1120px) {
+  .sign-in-box {
+    height: 100%;
+    width: 100%;
+  }
+
+  .form-container {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  .brand-container {
+    margin: 0;
+    width: $sign-in-container-left-small-width;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .brand-container {
+    display: none;
+  }
+
+  .form-container {
+    width: 100%;
+
+    .logo-right {
+      display: inline-flex;
+    }
+
+    .sign-in-footer {
+      border-top: $sign-in-footer-border-top;
+
+      .sign-in-cookies {
+        box-shadow: $sign-in-cookies-box-shadow;
+        display: block;
+        margin: 0;
+        padding: $sign-in-cookies-padding;
+      }
+    }
+  }
+}

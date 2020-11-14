@@ -1,0 +1,241 @@
+/* Button styling
+   ========================================================================== */
+/* button */
+.btn {
+  background-color: transparent;
+  border-radius: $eos-btn-border-radius;
+  font-weight: bold;
+  line-height: $eos-btn-line-height;
+  padding: $eos-btn-padding;
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled):active:focus,
+  &:hover,
+  &:active:hover,
+  &:active,
+  &.active,
+  &:focus,
+  &.focus,
+  &.active.focus,
+  &.active:focus,
+  &:active:focus,
+  &:active.focus {
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  .eos-icons {
+    margin-right: 0;
+    pointer-events: none;
+    vertical-align: text-bottom;
+  }
+}
+
+/* Default button */
+.btn-secondary {
+  border-color: $eos-btn-secondary-color;
+  color: $eos-btn-secondary-color;
+
+  &:hover,
+  &:active:hover {
+    border-color: $eos-btn-secondary-color-hover;
+    color: $eos-btn-secondary-color-hover;
+  }
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled):active:focus,
+  &:active,
+  &.active,
+  &:focus,
+  &.focus,
+  &.active.focus,
+  &.active:focus,
+  &:active:focus,
+  &:active.focus {
+    border-color: $eos-btn-secondary-color-active;
+    color: $eos-btn-secondary-color-active;
+  }
+
+  &.disabled,
+  &.disabled:hover,
+  &.disabled:focus {
+    background-color: transparent;
+    border-color: $eos-btn-secondary-disabled;
+    color: $eos-btn-secondary-disabled;
+    opacity: $eos-btn-all-disabled-opacity;
+  }
+}
+
+/* Default button inverse */
+.btn-secondary-inverse {
+  border-color: $eos-btn-secondary-inverse-color;
+  color: $eos-btn-secondary-inverse-color;
+
+  &:hover,
+  &:active:hover {
+    border-color: $eos-btn-secondary-inverse-color-hover;
+    color: $eos-btn-secondary-inverse-color-hover;
+  }
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled):active:focus,
+  &:active,
+  &.active,
+  &:focus,
+  &.focus,
+  &.active.focus,
+  &.active:focus,
+  &:active:focus,
+  &:active.focus {
+    border-color: $eos-btn-secondary-inverse-color-active;
+    color: $eos-btn-secondary-inverse-color-active;
+  }
+
+  &.disabled,
+  &.disabled:hover,
+  &.disabled:focus {
+    background-color: transparent;
+    border-color: $eos-btn-secondary-inverse-color;
+    color: $eos-btn-secondary-inverse-color;
+    opacity: $eos-btn-all-disabled-opacity;
+  }
+}
+
+/* Primary button */
+.btn-primary {
+  background-color: $eos-btn-primary-color;
+  border-color: $eos-btn-primary-color;
+  color: $eos-btn-primary-text-color;
+
+  &:hover,
+  &:active:hover {
+    background-color: $eos-btn-primary-color-hover;
+    border-color: $eos-btn-primary-color-hover;
+    color: $eos-btn-primary-text-color;
+  }
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled):active:focus,
+  &:active,
+  &.active,
+  &:focus,
+  &.focus,
+  &.active.focus,
+  &.active:focus,
+  &:active:focus,
+  &:active.focus {
+    background-color: $eos-btn-primary-color-active;
+    border-color: $eos-btn-primary-color-active;
+    color: $eos-btn-primary-text-color;
+  }
+
+  &.disabled,
+  &.disabled:hover,
+  &.disabled:focus {
+    background-color: $eos-btn-primary-color;
+    border-color: $eos-btn-primary-color;
+    opacity: $eos-btn-all-disabled-opacity;
+  }
+}
+
+/* Outline primary button */
+.btn-outline-primary {
+  border-color: $eos-btn-primary-color;
+  color: $eos-btn-primary-color;
+
+  &:hover,
+  &:active:hover {
+    border-color: $eos-btn-primary-color-hover;
+    color: $eos-btn-primary-color-hover;
+  }
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled):active:focus,
+  &:active,
+  &.active,
+  &:focus,
+  &.focus,
+  &.active.focus,
+  &.active:focus,
+  &:active:focus,
+  &:active.focus {
+    border-color: $eos-btn-primary-color-active;
+    color: $eos-btn-primary-color-active;
+  }
+
+  &.disabled,
+  &.disabled:hover,
+  &.disabled:focus {
+    border-color: $eos-btn-primary-color;
+    color: $eos-btn-primary-color;
+    opacity: $eos-btn-all-disabled-opacity;
+  }
+}
+
+/* Danger button */
+.btn-danger {
+  background-color: $eos-btn-danger-color;
+  border-color: $eos-btn-danger-color;
+  color: $eos-btn-danger-text-color;
+
+  &:hover,
+  &:active:hover {
+    background-color: $eos-btn-danger-color-hover;
+    border-color: $eos-btn-danger-color-hover;
+    color: $eos-btn-danger-text-color;
+  }
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled):active:focus,
+  &:active,
+  &.active,
+  &:focus,
+  &.focus,
+  &.active.focus,
+  &.active:focus,
+  &:active:focus,
+  &:active.focus {
+    background-color: $eos-btn-danger-color-active;
+    border-color: $eos-btn-danger-color-active;
+    color: $eos-btn-danger-text-color;
+  }
+
+  &.disabled,
+  &.disabled:hover,
+  &.disabled:focus {
+    background-color: $eos-btn-danger-color;
+    border-color: $eos-btn-danger-color;
+    color: $eos-btn-danger-text-color;
+    opacity: $eos-btn-all-disabled-opacity;
+  }
+}
+
+/* Icon only button */
+.btn-icon {
+  i {
+    margin: 0;
+  }
+}
+
+/* Extra small button */
+.btn-xs {
+  padding: $eos-btn-xs-padding;
+}
+
+/* Small button */
+.btn-sm {
+  padding: $eos-btn-sm-padding;
+}
+
+/* Vertical-align icons Extra small and small button */
+.btn-xs,
+.btn-sm {
+  .eos-icons {
+    vertical-align: bottom;
+  }
+}
+
+/* Large button */
+.btn-lg {
+  padding: $eos-btn-lg-padding;
+}

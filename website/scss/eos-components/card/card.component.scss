@@ -1,0 +1,380 @@
+/* Cards
+   ========================================================================== */
+/**
+* Use it in HTML as (Card with text & image)
+* <article class='articles-gallery'>
+*   <div class='card-content'>
+*     <header>
+*       <h3> Card title</h3>
+*     </header>
+*     <p>
+*       Card content
+*     </p>
+*     <div class='figure-wrap'>
+*       <figure>
+*         <img src='image url'>
+*       </figure>
+*     </div>
+*     <footer>
+*       Footer content
+*     </footer>
+*   </div>
+* </article>
+*
+* Variables file: assets/stylesheets/eos-custom-components/card/card.variables.scss
+*/
+
+.card {
+  background: $eos-card-bg;
+  border: 0;
+  border-radius: $eos-base-border-radius-size;
+  box-shadow: $eos-card-box-shadow;
+  display: flex;
+  flex-direction: column;
+  font-size: $eos-card-font-size;
+  justify-content: space-between;
+  outline: none;
+  transition: all 250ms ease-in-out;
+
+  .card-header {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin-bottom: 0;
+    }
+
+    &:first-child {
+      border-color: $eos-base-border-color;
+      border-top-left-radius: $eos-base-border-radius-size;
+      border-top-right-radius: $eos-base-border-radius-size;
+    }
+  }
+
+  .card-img-top {
+    border-top-left-radius: $eos-base-border-radius-size;
+    border-top-right-radius: $eos-base-border-radius-size;
+    object-fit: cover;
+  }
+
+  // sass-lint:disable no-important
+  &.bg-success {
+    .card-header {
+      background-color: $eos-bc-green-500 !important;
+    }
+  }
+
+  &.bg-danger {
+    .card-header {
+      background-color: $eos-bc-red-500 !important;
+    }
+  }
+
+  &.bg-warning {
+    .card-header {
+      background-color: $eos-bc-yellow-500 !important;
+    }
+  }
+
+  &.bg-info {
+    .card-header {
+      background-color: $eos-bc-cerulean-900 !important;
+    }
+  }
+
+  &.bg-success,
+  &.bg-danger,
+  &.bg-warning,
+  &.bg-info {
+    background-color: transparent !important;
+
+    .card-header {
+      color: $eos-bc-white;
+    }
+  }
+  // sass-lint:enable no-important
+
+  // Rules for horizontal cards.
+  .row {
+    .card-img {
+      border-bottom-left-radius: $eos-base-border-radius-size;
+      border-top-left-radius: $eos-base-border-radius-size;
+      border-top-right-radius: 0;
+      object-fit: cover;
+    }
+
+    .card-header:first-child {
+      border-bottom-left-radius: $eos-base-border-radius-size;
+      border-right: $eos-card-default-border;
+      border-top-left-radius: $eos-base-border-radius-size;
+      border-top-right-radius: 0;
+
+      i {
+        margin: 0;
+        text-align: center;
+      }
+    }
+
+    .card-with-icon {
+      border-bottom: 0;
+      border-bottom-right-radius: 0;
+      border-top-right-radius: 0;
+      border-width: 1px;
+      height: 100%;
+    }
+  }
+
+  &-header,
+  &-with-icon {
+    background-color: $eos-bc-white;
+    border-top-left-radius: $eos-base-border-radius-size;
+    border-top-right-radius: $eos-base-border-radius-size;
+  }
+
+  &-with-icon {
+    align-items: center;
+    background-color: $eos-bc-white;
+    display: flex;
+    justify-content: center;
+    padding: 1.25rem;
+
+    i {
+      margin: 0;
+    }
+  }
+
+  &-body {
+    border-bottom-left-radius: $eos-base-border-radius-size;
+    border-bottom-right-radius: $eos-base-border-radius-size;
+
+    .btn {
+      margin: 0 $eos-s $eos-s 0;
+    }
+
+    .card-subtitle {
+      color: $eos-card-subtitle-color;
+    }
+
+    .card-text small {
+      color: $eos-card-subtitle-color;
+    }
+  }
+
+  /* Styles for card wrapped by anchor */
+  &.clickable {
+    color: $eos-card-text;
+    text-decoration: none;
+
+    &:hover {
+      box-shadow: $eos-card-hover-box-shadow;
+      transform: translate(0, -16px);
+
+      &::before {
+        content: '';
+        height: $eos-card-hover-anim-height;
+        position: absolute;
+        top: 100%;
+        width: 100%;
+      }
+    }
+
+    a {
+      &:link,
+      &:active,
+      &:hover,
+      &:focus,
+      &:visited {
+        color: $eos-card-text;
+        text-decoration: none;
+      }
+    }
+
+    // overwrite Bootstrap inherit property
+    h3 {
+      color: $eos-card-text;
+    }
+  }
+
+  /* Status for disabled card */
+  &.disabled {
+    figure.round {
+      background-image: linear-gradient(130deg, $eos-card-inactive-circle-gradient-from 0%, $eos-card-inactive-circle-gradient-to 100%);
+    }
+
+    footer {
+      color: $eos-card-footer-disable-color;
+    }
+  }
+
+  @media screen and (max-width: $eos-sd-max) {
+    margin: $eos-card-margin 0;
+  }
+}
+
+/* Horizontal card style layout.
+  ========================================================================== */
+.card-horizontal {
+  border: 1px solid $eos-card-horizontal-default-color;
+  border-bottom: 5px solid $eos-card-horizontal-default-color;
+  box-shadow: none;
+  color: $eos-card-horizontal-link-color;
+  display: flex;
+  font-size: $eos-card-font-size;
+  height: 100%;
+  position: relative;
+
+  &.slick-slide:not(:last-of-type) {
+    margin-right: $eos-card-margin;
+  }
+
+  h3 {
+    margin-top: 0;
+  }
+
+  .card-content {
+    display: flex;
+    justify-content: space-between;
+    padding: $eos-card-content-padding;
+    width: 100%;
+
+    p {
+      margin: 0;
+    }
+
+    div:first-child {
+      display: flex;
+      flex-direction: column;
+      width: 60%;
+    }
+
+    div:last-child {
+      align-self: center;
+      display: flex;
+      justify-content: center;
+      width: 40%;
+
+      img {
+        max-width: $eos-card-horizontal-image-width;
+      }
+
+      /* We'll have to move those to  helper classes once we decide for the structure*/
+      img.small-image {
+        max-height: $eos-card-horizontal-small-image-max-height;
+        width: 40%;
+      }
+
+      img.img-news {
+        height: $eos-card-horizontal-image-news;
+      }
+    }
+
+    div:only-child {
+      display: flex;
+      width: 100%;
+    }
+  }
+
+  footer {
+    align-items: center;
+    background: $eos-card-horizontal-default-color;
+    border-radius: 0 0 $eos-base-border-radius-size $eos-base-border-radius-size;
+    bottom: $eos-card-horizontal-bottom-margin;
+    color: $eos-card-horizontal-default-text-color;
+    display: flex;
+    font-weight: bold;
+    height: 0;
+    justify-content: center;
+    opacity: 0;
+    position: absolute;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+    z-index: 0;
+
+    @media screen and (max-width: $eos-sd-max) {
+      display: none;
+    }
+
+    p {
+      opacity: 0;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+
+  /* Card icons positions */
+  .card-icon {
+    position: absolute;
+    right: $eos-card-horizontal-icon-position;
+    top: $eos-card-horizontal-icon-position;
+
+    .eos-icons {
+      margin-right: 0;
+    }
+  }
+
+  .card-date {
+    color: $eos-card-horizontal-date-color;
+  }
+
+  /* Manage hover state of footer */
+  &:hover {
+    color: $eos-card-horizontal-link-color;
+    cursor: pointer;
+    text-decoration: none;
+
+    footer {
+      height: $eos-card-horizontal-footer-hover;
+      opacity: 1;
+      z-index: $eos-card-horizontal-footer-zindex;
+
+      p {
+        opacity: 1;
+      }
+    }
+  }
+
+  // &-color {
+  //   border: $eos-card-horizontal-colored-border;
+  //   border-bottom: $eos-card-horizontal-colored-border-bottom;
+  // }
+}
+
+/* Vertical card, dashboard cards.
+========================================================================== */
+.card-vertical {
+  height: $eos-card-vertical-width;
+
+  .card-content {
+    flex-direction: column;
+    padding: $eos-card-padding;
+  }
+
+  footer {
+    background: $eos-card-bg;
+    border-top: 1px solid $eos-card-divider-color;
+    color: $eos-card-footer-color;
+    flex: 0;
+    height: auto;
+    padding: $eos-card-padding;
+
+    i {
+      margin-left: $eos-card-footer-icon-margin;
+    }
+
+    &.disabled {
+      color: $eos-card-footer-disabled;
+    }
+  }
+
+  h3 {
+    margin-bottom: $eos-card-vertical-h3-margin-bottom;
+  }
+
+  .figure-wrap {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+  }
+}

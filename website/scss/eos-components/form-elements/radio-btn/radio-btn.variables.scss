@@ -1,0 +1,18 @@
+/* Radio button variables
+   ========================================================================== */
+/**
+*
+*  Z-index variables: /assets/stylesheets/eos-base/variables/z-index.scss
+*  Color variables: /assets/stylesheets/eos-base/variables/branding.scss
+*
+*/
+$eos-radio-btn-label-margin: $eos-s;
+$eos-radio-btn-zindex: $eos-zindex-negative;
+$eos-radio-btn-height: 16px;
+$eos-radio-btn-width: 16px;
+$eos-radio-btn-top: .25rem;
+$eos-radio-btn-border: $eos-form-element-color;
+$eos-radio-btn-checked: $eos-form-element-approved;
+$eos-radio-btn-focus: $eos-form-element-focus;
+$eos-radio-btn-disabled: $eos-bc-gray-300;
+

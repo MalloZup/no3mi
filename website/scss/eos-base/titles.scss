@@ -1,0 +1,90 @@
+/* Titles
+   ========================================================================== */
+/**
+* Titles
+*
+* Typography variables: /assets/stylesheets/eos-base/variables/typography.scss
+* Titles variables: /assets/stylesheets/eos-base/variables/titles.scss
+* Spacing variables: /assets/stylesheets/eos-base/variables/spacings.scss
+*/
+
+.subheadline,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $eos-font-type-headlines;
+}
+
+h1,
+h2 {
+  font-weight: $eos-font-weight-normal-base;
+  line-height: $eos-line-height;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-weight: $eos-font-weight-headers-bold;
+  line-height: $eos-line-height;
+}
+
+h1 {
+  font-size: $eos-h1-font-size;
+}
+
+h2 {
+  font-size: $eos-h2-font-size;
+}
+
+h3 {
+  font-size: $eos-h3-font-size;
+  line-height: $eos-line-height;
+}
+
+h4 {
+  font-size: $eos-h4-font-size;
+}
+
+h5 {
+  font-size: $eos-h5-font-size;
+}
+
+h6 {
+  font-size: $eos-h6-font-size;
+}
+
+.title-line {
+  margin-bottom: $eos-xl;
+  width: 100%;
+
+  &::after,
+  &::before {
+    border-top: 1px solid #ddd;
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    width: 30%;
+  }
+
+  &::before {
+    margin-right: $eos-xl;
+  }
+
+  &::after {
+    margin-left: $eos-xl;
+  }
+}
+
+.title-no-margings {
+  margin: 0;
+}
+
+.subheadline {
+  font-size: $eos-h4-font-size;
+  font-weight: $eos-font-weight-light-base;
+  line-height: $eos-line-height;
+}

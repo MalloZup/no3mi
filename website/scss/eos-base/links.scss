@@ -1,0 +1,98 @@
+/* Links
+   ========================================================================== */
+/**
+*
+* Links variables: /assets/stylesheets/eos-base/variables/links.scss
+*/
+
+/* Set the link color to our blue and not the bootstrap default */
+/* Remove the default text decoration from link status */
+a,
+a:active,
+a:visited,
+a:focus {
+  text-decoration: none;
+}
+
+a,
+.link-default,
+// Bootstrap 4 overwrite - used only for demo purposes
+a:not([href]):not([tabindex]) {
+  color: $eos-link-default-color;
+  font-weight: bold;
+
+  &:hover {
+    color: $eos-link-default-color;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  & * p {
+    font-weight: normal;
+  }
+}
+
+a.link-dark,
+// Bootstrap 4 overwrite - used only for demo purposes
+a.link-dark:not([href]):not([tabindex]) {
+  color: $eos-link-dark-color;
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+a.link-light,
+// Bootstrap 4 overwrite - used only for demo purposes
+a.link-light:not([href]):not([tabindex]) {
+  color: $eos-link-light-color;
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+// link buttons
+a.btn-link-dark,
+a.btn-link-dark:not([href]):not([tabindex]) {
+  color: $eos-link-dark-color;
+  font-weight: bold;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+a.btn-link-light,
+a.btn-link-light:not([href]):not([tabindex]) {
+  color: $eos-link-light-color;
+  font-weight: bold;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+/* Title anchors */
+.anchor {
+  position: relative;
+
+  a {
+    color: $eos-link-dark-color;
+    left: $eos-anchor-link-position;
+    position: absolute;
+    visibility: hidden;
+  }
+
+  .eos-icons {
+    vertical-align: inherit;
+  }
+
+  &:hover > a {
+    visibility: visible;
+  }
+}
+
+

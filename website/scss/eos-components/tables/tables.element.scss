@@ -1,0 +1,111 @@
+/* Tables styling
+   ========================================================================== */
+.table {
+  overflow: hidden;
+
+  td,
+  th {
+    vertical-align: middle;
+
+    &:first-child {
+      padding-left: $table-cell-v-p;
+    }
+  }
+
+  td {
+    border-top: 1px solid $table-td-border;
+  }
+
+  thead {
+    th {
+      border-bottom: 1px solid $table-th-border-b;
+      border-top: 0;
+      color: $table-th-color;
+      padding: $table-cell-h-p $table-cell-v-p;
+    }
+  }
+
+  tr {
+    transition: background-color 0.35s ease;
+
+    &:hover {
+      background-color: $eos-bc-gray-50;
+    }
+  }
+
+  .eos-table-actions {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .dropdown > a,
+  .dropdown > a:hover {
+    color: $table-actions-link;
+  }
+
+  // TODO: This ooverwrites the toggle - should probably be moved to the toggle component
+  .form-group {
+    margin-bottom: 0;
+    min-height: $table-form-group-h;
+  }
+
+  //small table
+  &.table-sm td {
+    padding: $table-cell-h-p 4px;
+
+    &:first-child {
+      padding-left: $table-cell-v-p;
+    }
+  }
+
+  // Dark
+  &.table-dark {
+    background: $table-dark-bg;
+    color: $table-dark-text;
+
+    thead {
+      th {
+        color: $table-dark-text;
+      }
+    }
+
+    .eos-table-actions a {
+      color: $table-dark-text;
+    }
+
+    .dropdown-menu.show {
+      background: $table-dark-bg;
+      border: 1px $table-dark-text;
+    }
+  }
+}
+
+.eos-table-card {
+
+  border-radius: $table-card-radius;
+
+  .card-header {
+    align-content: center;
+    background: $table-card-bg;
+    border-bottom: 1px solid $eos-bc-gray-100;
+    display: flex;
+    justify-content: space-between;
+    line-height: 1.6;
+    padding: $table-cell-h-p $table-cell-v-p;
+
+    ul {
+      margin: 0;
+    }
+
+    li {
+      margin: 0;
+      padding: 0;
+
+      &:last-child {
+        .eos-icons {
+          margin: 0;
+        }
+      }
+    }
+  }
+}

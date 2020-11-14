@@ -1,0 +1,96 @@
+/* ==========================================================================
+  Sign in style
+========================================================================== */
+.error-bg {
+  background: $eos-error-layout-background;
+}
+
+.error-content {
+  height: 100%;
+}
+
+.error-header {
+  background: $eos-error-layout-header-background;
+  padding: $eos-error-header-padding;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.error-container {
+  background: $eos-error-info-background;
+  box-shadow: $eos-error-container-box-shadow;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  margin-left: $eos-error-container-margin-left;
+  width: $eos-error-container-width;
+}
+
+.error-info {
+  background: $eos-error-container-background;
+  display: flex;
+  flex-direction: column;
+  height: 70%;
+  justify-content: space-between;
+  margin-top: $eos-error-info-margin-top;
+  padding: $eos-error-info-padding;
+
+  h1 {
+    color: $eos-error-info-h1-color;
+    font-size: $eos-error-info-h1-font-size;
+    line-height: $eos-error-info-h1-line-height;
+
+    span {
+      color: $eos-error-info-h2-color;
+      display: flex;
+      font-size: $eos-error-info-h2-font-size;
+      line-height: $eos-error-info-h2-line-height;
+    }
+  }
+
+  p {
+    width: 75%;
+  }
+
+  span {
+    color: $eos-error-info-p-span-color;
+    display: block;
+  }
+}
+
+.error-footer {
+  background: $eos-error-info-background;
+  text-align: left;
+
+  ul {
+    margin: $eos-error-footer-ul-margin;
+    padding: 0;
+
+    li {
+      display: inline-flex;
+      margin-right: $eos-error-footer-li-margin-right;
+      padding: $eos-error-footer-li-padding;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .error-container {
+    margin-left: 0;
+    width: 100%;
+
+    .error-info {
+      background-position: 108% -50px;
+    }
+
+    p {
+      width: 70%;
+    }
+  }
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Latest compiled and minified CSS-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/eos-icons/dist/css/eos-icons.css">
+    <link rel="stylesheet" href="css/eos-style.css">
+    <title>EOS - Layout</title>
+    <body>
+      <aside class="main-menu js-main-menu">
+        <div class="mm-navigation-container">
+          <header><a class="hide-collapsed" href="https://www.eosdesignsystem.com/"><img src="images/opensuse.png" alt="SUSE product brand logotype">openSUSE</a>
+            <div class="mm-navigation-close js-sidebar-toggle"><i class="eos-icons js-sidebar-tooltip js-tooltip" data-placement="bottom" title="">menu</i></div>
+          </header>
+          <div class="nav-wrap">
+            <ul class="menu-togglable no-list-style">
+              <li class="menu-item">
+                <div class="menu-element"><span class="main-collapsed-title">Dashboard</span></div><a class="menu-title js-select-current-parent js-feature-flag" href="/"><i class="eos-icons">home</i><span class="menu-title-content">Home</span></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </aside>
+      <section class="content">
+        <div class="submenu js-submenu-section">
+		<nav class="main-submenu js-submenu-make-visible" data-parent-menu="examples"><a class="submenu-item js-select-current">Tuning</a></nav>
+		  
+          <div class="dropdown js-submenu-more"><a class="submenu-item dropdown-toggle" data-toggle="dropdown"><i class="eos-icons eos-24 js-tooltip" data-toggle="tooltip" title="More" data-placement="bottom">more_horiz</i></a>
+            <ul class="dropdown-menu dropdown-menu-left js-submenu-content">
+              <li>
+                <div class="dropdown-header"><span class="subtitle">More</span></div>
+              </li>
+              <li class="js-submenu-more-list"></li>
+            </ul>
+          </div>
+        </div>
+        <div class="container">
+          <h1>Welcome to openSUSE tuning microservice</h1>
+          <p>This is a demo application</p>
+        </div>
+      </section>
+
+    </body>
+  </head>
+</html>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<script src="js/index.js"></script>
+<script src="js/demo.js"></script>

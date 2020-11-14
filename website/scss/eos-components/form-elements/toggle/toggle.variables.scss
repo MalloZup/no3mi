@@ -1,0 +1,21 @@
+/* Toggle variables
+   ========================================================================== */
+/**
+*
+*  Spacing variables: /assets/stylesheets/eos-base/variables/spacings.scss
+*  Color variables: /assets/stylesheets/eos-base/variables/branding.scss
+*
+*/
+
+$eos-toggle-switch-padding-left: 50px;
+$eos-toggle-border-radius: 10px;
+$eos-toggle-height: 20px;
+$eos-toggle-left: -50px;
+$eos-toggle-top: 1px;
+$eos-toggle-width: $eos-xxl - 8px;
+$eos-toggle-circle-top: $eos-xs - 1;
+$eos-toggle-circle-left: -$eos-xxl;
+$eos-toggle-circle-width: $eos-m;
+$eos-toggle-circle-height: $eos-m;
+$eos-toggle-circle-bg: $eos-bc-white;
+$eos-toggle-selected-disabled: $eos-bc-green-100;

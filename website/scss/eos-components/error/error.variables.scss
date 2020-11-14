@@ -1,0 +1,28 @@
+/* Sign in variables
+   ========================================================================== */
+
+/* Colors variables: /assets/stylesheets/eos-base/variables/branding.scss */
+$eos-error-layout-background: url('../images/error-bg.png') repeat-x 450px;
+$eos-error-container-box-shadow: 0 0 21px $eos-bc-gray-100;
+$eos-error-container-background: url('../images/error-design.svg') #fff no-repeat 95% top;
+$eos-error-layout-header-background: $eos-bc-pine-500;
+$eos-error-info-h1-color: $eos-bc-red-500;
+$eos-error-info-h2-color: $eos-bc-pine-500;
+$eos-error-info-background: $eos-bc-white;
+/* Spacing variables: /assets/stylesheets/eos-base/variables/spacings.scss */
+
+$eos-error-container-height: calc(100vh);
+$eos-error-container-width: 460px;
+$eos-error-container-margin-left: 250px;
+$eos-error-info-padding: $eos-xxl $eos-xl;
+$eos-error-info-h1-font-size: 89px;
+$eos-error-info-margin-top: 53px;
+$eos-error-info-h1-line-height: 95px;
+$eos-error-info-h2-font-size: $eos-xl + 4px;
+$eos-error-info-h2-line-height: 40px;
+$eos-error-header-padding: $eos-m $eos-xl;
+$eos-error-info-p-margin-top: 230px;
+$eos-error-info-p-span-color: $eos-bc-red-500;
+$eos-error-footer-ul-margin: $eos-s $eos-l;
+$eos-error-footer-li-margin-right: $eos-s + 2px;
+$eos-error-footer-li-padding: $eos-s + 2px 0 $eos-m 0;

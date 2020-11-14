@@ -1,0 +1,71 @@
+/* Select css */
+.custom-select {
+  background: $eos-select-bg-active;
+  background-size: $eos-select-bg-size;
+  border: 0;
+  border-bottom: 1px solid $eos-form-element-color;
+  border-radius: 0;
+  color: $eos-select-txt-color;
+  cursor: pointer;
+  font-size: $eos-select-font;
+  padding: $eos-select-padding;
+  width: 100%;
+
+  option {
+    font-weight: $eos-select-option-font-weight;
+    padding: $eos-select-option-padding;
+  }
+
+  &:focus {
+    border-color: $eos-form-element-color;
+    box-shadow: 0px 1px 0px $eos-form-element-focus;
+    outline: 0;
+  }
+
+  &:disabled {
+    background: $eos-select-bg-disabled;
+    border-color: $eos-form-element-disabled;
+    color: $eos-form-element-disabled;
+    cursor: not-allowed;
+  }
+
+  &.approved {
+    border: 0;
+    border-bottom: 1px solid $eos-form-element-approved;
+  }
+
+  &.error {
+    border: 0;
+    border-bottom: 1px solid $eos-form-element-error;
+  }
+
+  &[multiple] {
+    background: none;
+    padding: 0;
+  }
+}
+
+.custom-multiple-select {
+  @extend .custom-select;
+  border: 1px solid $eos-form-element-color;
+  border-radius: $eos-multiple-select-border-radius;
+  overflow: auto;
+
+  &:focus {
+    box-shadow: 0px 0px 3px $eos-form-element-focus;
+  }
+
+  &.approved {
+    border: 1px solid $eos-form-element-approved;
+  }
+
+  &.error {
+    border: 1px solid $eos-form-element-error;
+
+    + .form-messages {
+      flex-direction: column;
+    }
+  }
+
+
+}
