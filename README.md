@@ -1,8 +1,9 @@
 #  Rationale:
 
-this is a Microservice demo application built for demo purposes.
+this is a Microservice demo application built for showcasing a microservice,
+which follows https://www.eosdesignsystem.com/ for layout/frontend of website.
 
-It uses https://www.eosdesignsystem.com/ for layout of website and golang as backend.
+As backend it uses golang.
 
 # Usage
 
